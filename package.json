@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
+    "@suadelabs/vue3-multiselect": "^1.0.2",
     "core-js": "^3.6.5",
     "v-calendar": "^3.0.0-alpha.6",
     "vue": "^3.0.0",
+    "vue-multiselect": "^3.0.0-alpha.2",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.2"
   },

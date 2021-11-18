@@ -5,12 +5,12 @@ import Supervisor from '../views/Supervisor.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'Login',
     component: Login
   },
   {
-    path: '/supervisor',
+    path: '/',
     name: 'Supervisor',
     component: Supervisor
   }
