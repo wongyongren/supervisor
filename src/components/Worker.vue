@@ -24,4 +24,4 @@ export default {
 }
 </script>
 
-<style src="C:\Users\user\Documents\program\supervisor\node_modules\vue-multiselect\dist\vue-multiselect.css"></style>
+<style src="vue-multiselect/dist/vue-multiselect.css"></style>
