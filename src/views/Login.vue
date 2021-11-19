@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     login: function () {
-        location.href='/supervisor'
+        location.href='/'
     },
   },
 };

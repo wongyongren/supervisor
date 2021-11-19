@@ -1,21 +1,31 @@
 <template>
-  <div class="row">
-    <span> Select Date & Time for Worker</span>
+  <div class="">
+    <Header />
+    <h1>Supervisor Page</h1>
+    <DateTime />
     <DateTime />
     <Worker />
+    <button @click="submit" color="cust-secondary">Submit</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import DateTime from '@/components/DateTime.vue'
-import Worker from '@/components/Worker.vue'
+import DateTime from "@/components/DateTime.vue";
+import Worker from "@/components/Worker.vue";
+import Header from "../components/header.vue";
 
 export default {
-  name: 'Home',
+  name: "Supervisor",
   components: {
     DateTime,
-    Worker
-  }
-}
+    Worker,
+    Header,
+  },
+  methods: {
+    submit: function () {
+      location.href = "/report";
+    },
+  },
+};
 </script>
