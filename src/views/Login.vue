@@ -2,10 +2,10 @@
   <div id="login">
     <h1>Login Page</h1>
     <br>
-    <input type="text" name="username" />
+    <input placeholder="User Name" type="text" name="username" />
     <br>
     <br>
-    <input type="password" name="password" />
+    <input placeholder="Password" type="password" name="password" />
     <br>
     <br>
     <button class="loginButton" type="button" v-on:click="login()">Login</button>
