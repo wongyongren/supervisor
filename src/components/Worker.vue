@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" style="text-align: left">
     <div class="col">
       <span> Select Worker</span>
     </div>
@@ -14,7 +14,7 @@
       </VueMultiselect>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="text-align: left">
     <div class="col">
       <span> Select Project Site</span>
     </div>

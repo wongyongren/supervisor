@@ -1,7 +1,7 @@
 <template>
-  <div class="row">
+  <div class="row" style="text-align: left">
     <div class="col">
-    <span> Select Date & Time for Worker</span>
+    <span> Select Date & Time</span>
     </div>
     <div class="col">
       

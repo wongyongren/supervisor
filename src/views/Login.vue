@@ -1,9 +1,14 @@
 <template>
   <div id="login">
     <h1>Login Page</h1>
+    <br>
     <input type="text" name="username" />
+    <br>
+    <br>
     <input type="password" name="password" />
-    <button type="button" v-on:click="login()">Login</button>
+    <br>
+    <br>
+    <button class="loginButton" type="button" v-on:click="login()">Login</button>
   </div>
 </template>
 
@@ -35,4 +40,11 @@ export default {
   margin-top: 200px;
   padding: 20px;
 }
+.loginButton {
+  background-color: #e7e7e7;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.loginButton:hover {background-color: white;}
 </style>

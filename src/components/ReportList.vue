@@ -1,19 +1,36 @@
 <template >
-  <div v-for="site in sites" :key="site" class="row box">
-    <h3>{{ site.location }}</h3>
-
-    <div v-for="worker in site.worker" :key="worker" class="">
+  <table v-for="site in sites" :key="site" id="customers">
+    <tr>
+      <th>{{ site.location }}</th>
+      <th>Worker In Time</th>
+      <th>Worker Out Time</th>
+    </tr>
+    <tr v-for="worker in site.worker" :key="worker">
       <!--time in -->
-      <div v-if="worker.timeIn != null && worker.timeOut == null">
-        <li>{{ worker.name }} - {{ worker.timeIn }}</li>
-      </div>
+      <td v-if="worker.timeIn != null && worker.timeOut == null">
+        {{ worker.name }}
+      </td>
+      <td v-if="worker.timeIn != null && worker.timeOut == null">
+        {{ worker.timeIn }}
+      </td>
+      <td v-if="worker.timeIn != null && worker.timeOut == null">
+        NULL
+      </td>
       <!--time in & out -->
-      <div v-if="worker.timeOut != null">
-        <li>{{ worker.name }} - {{ worker.timeIn }} - {{ worker.timeOut }}</li>
-      </div>
-    </div>
-  </div>
-  <button v-print>Print the entire page</button>
+        <td v-if="worker.timeOut != null">
+          {{ worker.name }} 
+        </td>
+        <td v-if="worker.timeOut != null">
+          {{ worker.timeIn }}
+        </td>
+        <td v-if="worker.timeOut != null">
+          {{ worker.timeOut }}
+        </td>
+    </tr>
+      <br />
+  </table>
+
+  <button class="button printButton" v-print>Print the entire page</button>
 </template>
 
 <script>
@@ -56,14 +73,14 @@ export default {
             {
               id: 1,
               name: "Wong",
-              timeIn: "123",
-              timeOut: "123",
+              timeIn: "10:05:15 AM",
+              timeOut: null,
             },
             {
               id: 2,
               name: "ABC",
-              timeIn: "123",
-              timeOut: "123",
+              timeIn: "11:35:15 AM",
+              timeOut: "2:30:15 PM",
             },
           ],
         },
@@ -108,4 +125,36 @@ export default {
 </script>
 
 <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: green;
+  color: white;
+}
+.printButton{
+  border-radius: 4px;
+}
 </style>
