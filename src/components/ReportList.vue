@@ -1,7 +1,9 @@
 <template >
   <table v-for="site in sites" :key="site" id="customers">
+    <tr > <th style="background-color:black" colspan="3">{{ site.location }}</th>
+    </tr>
     <tr>
-      <th>{{ site.location }}</th>
+      <th>Worker Name</th>
       <th>Worker In Time</th>
       <th>Worker Out Time</th>
     </tr>

@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="container" style="text-align:center;padding:100px">
+  <div class="container" style="text-align:center;padding:50px">
   <h1>Report Page</h1>
   <div><h2>Date : {{ date.getUTCDate() + "-" +date.getUTCMonth() + "-" +date.getUTCFullYear() }}</h2></div>
   <ReportList />

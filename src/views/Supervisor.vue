@@ -37,7 +37,7 @@ export default {
 <style>
 .container {
   text-align: center;
-  padding: 100px;
+  padding: 50px;
   
 }
 .supervisor{
